@@ -1,0 +1,6 @@
+[package]
+name = "fun-tictactoe"
+version = "0.1.0"
+authors = ["Peter Harliman Liem <peter.harliman@gmail.com>"]
+
+[dependencies]
