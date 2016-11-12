@@ -15,10 +15,12 @@ fn main() {
 
         let mut guess = String::new();
 
-        io::stdin().read_line(&mut guess)
+        io::stdin()
+            .read_line(&mut guess)
             .expect("failed to read line");
 
-        let guess: usize = guess.trim().parse()
+        let guess: usize = guess.trim()
+            .parse()
             .expect("Please type a number!");
 
         // update box
@@ -28,7 +30,7 @@ fn main() {
             println!("Box {} is already filled!", guess);
             continue;
         }
-        
+
         draw_box(my_box);
 
         // check winner
@@ -65,8 +67,8 @@ fn draw_box(input_box: [i32; 9]) {
                 0 => print!("| "),
                 1 => print!("|O"),
                 -1 => print!("|X"),
-                _ => print!("|?")
-            } 
+                _ => print!("|?"),
+            }
         }
         println!("|");
     }
